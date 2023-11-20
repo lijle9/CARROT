@@ -1,6 +1,6 @@
 玫瑰是碎掉的天灵盖
 
-python3 lstm_train.py -gpu 0 -model GRU -lr 1e-3 -save_dir MODEL/SAVE/PATH --data 
+python3 lstm_train.py -gpu 0 -model GRU -lr 1e-3 -save_dir MODEL/SAVE/PATH --data ../data/oj.pkl.gz
 
 python3：这是使用 Python 3 执行 Python 脚本的命令。
 
