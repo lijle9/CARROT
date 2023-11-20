@@ -1,4 +1,77 @@
 玫瑰是碎掉的天灵盖
 
+python3 lstm_train.py -gpu 0 -model GRU -lr 1e-3 -save_dir MODEL/SAVE/PATH --data 
 
+python3：这是使用 Python 3 执行 Python 脚本的命令。
+
+lstm_train.py：这是要执行的 Python 脚本的名称。
+
+-gpu 0：这是指定用于训练的 GPU 的参数。0 可能是 GPU 的索引。如果你的系统有多个 GPU，你可以选择使用哪一个。
+
+-model GRU：这是指定要训练的模型类型的参数。在这种情况下，它是门控循环单元（GRU）模型。GRU 是一种循环神经网络（RNN）架构。
+
+-lr 1e-3：这是指定训练过程中学习率的参数。学习率是一个超参数，它决定了在每次迭代中朝着损失函数的最小值移动的步长。
+
+-save_dir MODEL/SAVE/PATH：这是指定保存训练好的模型的目录的参数。你需要将 MODEL/SAVE/PATH 替换为实际想要保存模型的路径。
+
+--data：这是一个参数，表示接下来的参数是数据集的路径。在这个标志之后，你需要提供实际的数据集路径。
+
+总的来说，这个命令是指示脚本 lstm_train.py 使用 GPU 0 训练一个 GRU 模型，使用指定的学习率，并将训练好的模型保存在指定的目录中。在 --data 标志之后，需要提供数据集的路径。
+
+发生异常: SystemExit
+2
+
+缺失参数
+
+带参数调试vscode
+
+在 Visual Studio Code (VSCode) 中调试 Python 脚本的步骤如下：
+
+打开 VSCode：确保你已经打开了 VSCode 并加载了你的 Python 项目。
+
+打开调试视图：在左侧的导航栏中点击调试图标，或者按下 Ctrl + Shift + D 来打开调试视图。
+
+选择调试配置：在调试视图的顶部，你会看到一个绿色的运行箭头和一个下拉菜单。点击下拉菜单，选择 "Python File"。如果没有看到该选项，可能需要首先创建一个 launch.json 文件。
+
+配置 launch.json 文件：如果没有自动生成 launch.json 文件，你可以手动创建它。在 launch.json 文件中，确保 "program" 字段指向你的 Python 脚本的路径，并添加其他必要的配置。
+
+示例 launch.json 配置：
+
+json
+Copy code
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python File",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/lstm_train.py",
+            "args": [
+                "-gpu",
+                "0",
+                "-model",
+                "GRU",
+                "-lr",
+                "1e-3",
+                "-save_dir",
+                "C:\\Users\\Lenovo\\Desktop\\代码注释生成鲁棒性研究\\CARROT-main\\GRU",
+                "--data",
+                "../data/oj.pkl.gz"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
+请确保路径和参数与你的实际情况匹配。
+
+设置断点：在你想要断点的位置，点击行号左侧的空白区域。这将在那一行设置一个红色的断点。
+
+启动调试：点击调试视图的绿色运行箭头按钮，或者按下 F5 键启动调试。脚本将在设定的断点处暂停。
+
+交互调试：在 VSCode 中的调试控制台中，你可以使用调试工具栏的按钮执行一些操作，例如单步执行、继续执行等。你还可以在控制台中输入命令与程序交互。
+
+查看变量和状态：在调试控制台中，你可以查看变量的值，检查程序的状态等。
+
+通过这些步骤，你应该能够在 VSCode 中进行 Python 脚本的交互式调试。如果遇到问题，请查看调试控制台中的输出以获取更多信息。
 
