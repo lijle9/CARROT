@@ -75,3 +75,12 @@ Copy code
 
 通过这些步骤，你应该能够在 VSCode 中进行 Python 脚本的交互式调试。如果遇到问题，请查看调试控制台中的输出以获取更多信息。
 
+你可以使用以下方法之一来查看你的系统中 GPU 的编号：
+
+1. NVIDIA-SMI（NVIDIA 显卡）
+如果你使用的是 NVIDIA 的显卡，可以使用 NVIDIA-SMI 命令来查看当前系统中的 GPU 信息。打开命令行或终端，并输入以下命令：
+
+bash
+Copy code
+nvidia-smi
+这会显示系统中安装的 NVIDIA GPU 的详细信息，包括它们的编号、型号、驱动程序版本等。
